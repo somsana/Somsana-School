@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Somsana_School.Areas.Identity.Data
 {
-    public class Class
+    public class ApplicationUser : IdentityUser
     {
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
