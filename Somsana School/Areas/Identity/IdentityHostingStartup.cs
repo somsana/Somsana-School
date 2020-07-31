@@ -15,12 +15,12 @@ namespace Somsana_School.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<Somsana_SchoolContext>(options =>
+                services.AddDbContext<DataBaseContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("Somsana_SchoolContextConnection")));
+                        context.Configuration.GetConnectionString("DataBaseContextConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<Somsana_SchoolContext>();
+                    .AddEntityFrameworkStores<DataBaseContext>();
             });
         }
     }

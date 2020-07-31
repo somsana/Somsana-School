@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Somsana_School.Data
 {
-    public class Somsana_SchoolContext : IdentityDbContext<IdentityUser>
+    public class DataBaseContext : IdentityDbContext<IdentityUser>
     {
-        public Somsana_SchoolContext(DbContextOptions<Somsana_SchoolContext> options)
+        public DataBaseContext(DbContextOptions<DataBaseContext> options)
             : base(options)
         {
         }
